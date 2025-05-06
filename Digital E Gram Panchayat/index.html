@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital E Gram Panchayat</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- No need for type="module" if not using imports -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <header>
+        <img src="gp.jpg" alt="Logo">
+        <h1>Welcome to Digital E Gram Panchayat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showUserPage()">User</a></li>
+            <li><a href="#" onclick="showAdminPage()">Admin</a></li>
+            <li><a href="#" onclick="showStaffPage()">Staff</a></li>
+        </ul>
+    </nav>
+
+    <!-- User Dashboard (Initially Hidden) -->
+    <div id="userPage" style="display:none;">
+        <header>
+            <h1>User Dashboard</h1>
+        </header>
+        <section>
+            <button onclick="registerUser()">Register</button>
+            <button onclick="loginUser()">Login</button>
+            <button onclick="applyService()">Apply for Services</button>
+            <button onclick="checkStatus()">Check Application Status</button>
+        </section>
+        <footer>
+            <p>&copy; 2025 Digital E Gram Panchayat</p>
+        </footer>
+    </div>
+
+    <!-- Admin Dashboard (Initially Hidden) -->
+    <div id="AdminPage" style="display:none;">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+        <section>
+            <button onclick="createService()">Create New Service</button>
+            <button onclick="updateService()">Update/Delete Services</button>
+            <button onclick="viewApplications()">View Applications</button>
+        </section>
+        <footer>
+            <p>&copy; 2025 Digital E Gram Panchayat</p>
+        </footer>
+    </div>
+
+    <!-- Staff Dashboard (Initially Hidden) -->
+    <div id="staffPage" style="display:none;">
+        <header>
+            <h1>Staff Dashboard</h1>
+        </header>
+        <section>
+            <button onclick="updateApplicationStatus()">Update Application Status</button>
+            <button onclick="viewServices()">View Services</button>
+        </section>
+        <footer>
+            <p>&copy; 2025 Digital E Gram Panchayat</p>
+        </footer>
+    </div>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>

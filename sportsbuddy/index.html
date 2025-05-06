@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/firebase-config.js"></script>
+<script type="module" src="js/logger.js"></script>
+<script type="module" src="js/dashboard.js"></script>
+
+
+</head>
+<body>
+  <h2>Post a Sports Event</h2>
+  <form id="eventForm">
+    <input type="text" id="eventName" placeholder="Event Name" required />
+    <input type="text" id="eventLocation" placeholder="Location" required />
+    <input type="text" id="eventTime" placeholder="Time" required />
+    <button type="submit">Submit</button>
+  </form>
+  <section id="eventList"></section>
+</body>
+</html>

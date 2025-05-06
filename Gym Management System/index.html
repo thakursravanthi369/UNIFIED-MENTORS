@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <h1>Gym Management System</h1>
+    </div>
+  </header>
+
+  <nav>
+    <button onclick="showPage('adminPage')">Admin Dashboard</button>
+    <button onclick="showPage('memberPage')">Member Dashboard</button>
+  </nav>
+
+  <main>
+    <!-- Admin Dashboard -->
+    <section id="adminPage" class="page">
+      <h2>Admin Dashboard</h2>
+      <div class="admin-actions">
+        <button onclick="createMember()">Add Member</button>
+        <button onclick="updateDeleteMember()">Update/Delete Member</button>
+        <button onclick="createBill()">Create Bill</button>
+        <button onclick="assignFeePackage()">Assign Fee Package</button>
+        <button onclick="sendNotification()">Send Notification</button>
+        <button onclick="generateReport()">Generate Report</button>
+      </div>
+    </section>
+
+    <!-- Member Dashboard -->
+    <section id="memberPage" class="page">
+      <h2>Member Dashboard</h2>
+      <div class="member-actions">
+        <button onclick="viewBillReceipts()">View Bill Receipts</button>
+        <button onclick="viewNotifications()">View Notifications</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gym Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

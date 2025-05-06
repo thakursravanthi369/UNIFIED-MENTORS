@@ -1,0 +1,73 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: linear-gradient(to right, #163066, #8b9dc3);;
+  text-align: center;
+  padding: 30px;
+  background: #002244;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.center-wrapper {
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #004080;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #004080;
+  padding-bottom: 5px;
+}
+
+input, select, button {
+  display: block;
+  margin: 10px 0;
+  padding: 12px 15px;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #004080;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0059b3;
+}
+
+#questionContainer input {
+  margin-bottom: 10px;
+}

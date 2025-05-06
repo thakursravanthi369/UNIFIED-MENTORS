@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Mall Web Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="download.png" alt="Super Mall Logo" class="logo" />
+    </div>
+    <nav>
+      <button onclick="showPage('adminPage')">Admin Dashboard</button>
+      <button onclick="showPage('userPage')">User Dashboard</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Admin Dashboard -->
+    <section id="adminPage" class="page">
+      <h2>Admin Dashboard</h2>
+      <div class="admin-actions">
+        <h3>Manage Shop Details</h3>
+        <button onclick="createShop()">Create Shop</button>
+        <button onclick="updateShop()">Update Shop</button>
+        <button onclick="deleteShop()">Delete Shop</button>
+
+        <h3>Manage Offers</h3>
+        <button onclick="createOffer()">Create Offer</button>
+        <button onclick="updateOffer()">Update Offer</button>
+        <button onclick="deleteOffer()">Delete Offer</button>
+
+        <h3>Manage Categories & Floors</h3>
+        <button onclick="createCategory()">Create Category</button>
+        <button onclick="createFloor()">Create Floor</button>
+      </div>
+    </section>
+
+    <!-- User Dashboard -->
+    <section id="userPage" class="page">
+      <h2>User Dashboard</h2>
+      <div class="user-actions">
+        <h3>Browse Shops by Category</h3>
+        <button onclick="getShopsByCategory('Clothing')">View Clothing Shops</button>
+        <button onclick="getShopsByCategory('Electronics')">View Electronics Shops</button>
+
+        <h3>Product Comparison</h3>
+        <button onclick="compareProducts()">Compare Products</button>
+
+        <h3>View Shop Offers</h3>
+        <button onclick="viewOffersByShop()">View Offers for Shop</button>
+
+        <h3>Filter Shop List</h3>
+        <button onclick="filterShops()">Filter Shops</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Super Mall. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

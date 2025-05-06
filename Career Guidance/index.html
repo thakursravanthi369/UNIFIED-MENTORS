@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Guidance App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Career Guidance Platform</h1>
+  </header>
+  <main>
+    <div class="center-wrapper">
+      <section class="login">
+        <h2>Student Login</h2>
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="password" id="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+      </section>
+
+      <section class="signup">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+          <input type="text" id="name" placeholder="Full Name" required>
+          <input type="email" id="signupEmail" placeholder="Email" required>
+          <input type="password" id="signupPassword" placeholder="Password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </section>
+
+      <section class="location">
+        <h2>Select Your Preferred Location</h2>
+        <buttontton onclick="selectLocation('India')">India</button>
+        <button onclick="selectLocation('Abroad')">Abroad</button>
+      </section>
+
+      <section class="career">
+        <h2>Choose Your Career Path</h2>
+        <select id="careerSelect">
+          <option value="Engineering">Engineering</option>
+          <option value="Management">Management</option>
+          <option value="Medicine">Medicine</option>
+        </select>
+      </section>
+
+      <section class="test">
+        <h2>Aptitude Test</h2>
+        <button onclick="startTest()">Start Test</button>
+        <div id="questionContainer"></div>
+        <button id="submitTest" style="display:none;" onclick="submitTest()">Submit Test</button>
+      </section>
+
+      <section class="results">
+        <h2>Your Score</h2>
+        <p id="score"></p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
